@@ -33,24 +33,41 @@ git push heroku master
 ```bash
 npm install --save-dev ember-cli-bootstrap@0.0.10
 ```
+
 Confirmed. installing ember-cli-boostrap@0.0.10 yields
+
 ``` javascript
 Uncaught TypeError: undefined is not a function 
 ```
 
 ## Fix Attempt #1
 
-Attempting [this](https://github.com/ember-addons/bootstrap-for-ember/issues/168) fix. Need to 
+Attempting [this](https://github.com/ember-addons/bootstrap-for-ember/issues/168) fix.
 
 ```bash
 npm install --save-dev broccoli-merge-trees
 npm install --save-dev broccoli-static-compiler
 ```
 
+Fail. Apparently there was a problem with the paths I was providing. Perhaps it could have been fixed. I switched from `bower_components` to `node_modules` as the top level directory because the npm package `ember-cli-bootstrap` installs the npm package `bootstrap` in its directory.
+
 ## Fix Attempt #2
 
 Include the full version of Handlebars so that it is possible to compile templates on the fly as suggested [here](https://github.com/stefanpenner/ember-cli/issues/972)
 
+Add the following to `Brocfile.js`
+
+```javascript
+var app = new EmberApp({
+    vendorFiles: {
+        'handlebars.js': {
+            production:  'bower_components/handlebars/handlebars.js'
+        }
+    }
+});
+```
+
+Success. This works for now but its not a great fix as we should only need the Handlebars runtime. It would be best to figure out the issue with `ember-cli-boostrap` and fix it there.
 
 
 ## Pending Things to Try
