@@ -15,7 +15,7 @@ npm: 1.4.26
 ## Create the Heroku app
 
 ```bash
-heroku create ember-deploy-test --buildpack https://github.com/tonycoco/heroku-buildpack-ember-cli.git
+heroku create ember-heroku-deploy-test --buildpack https://github.com/tonycoco/heroku-buildpack-ember-cli.git
 ```
 
 ## Deploy
@@ -26,7 +26,7 @@ git push heroku master
 
 ## Test
 
-<http://ember-deploy-test.herokuapp.com/>
+<http://ember-heroku-deploy-test.herokuapp.com/>
 
 ## Add Components
 

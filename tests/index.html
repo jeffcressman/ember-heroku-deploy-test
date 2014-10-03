@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>EmberDeployTest Tests</title>
+    <title>EmberHerokuDeployTest Tests</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{BASE_TAG}}
 
     <link rel="stylesheet" href="assets/vendor.css">
-    <link rel="stylesheet" href="assets/ember-deploy-test.css">
+    <link rel="stylesheet" href="assets/ember-heroku-deploy-test.css">
     <link rel="stylesheet" href="assets/test-support.css">
     <style>
       #ember-testing-container {
@@ -34,15 +34,15 @@
     <div id="qunit-fixture"></div>
 
     <script>
-      window.EmberDeployTestENV = {{ENV}};
-      window.EmberENV = window.EmberDeployTestENV.EmberENV;
+      window.EmberHerokuDeployTestENV = {{ENV}};
+      window.EmberENV = window.EmberHerokuDeployTestENV.EmberENV;
     </script>
     <script src="assets/vendor.js"></script>
     <script src="assets/test-support.js"></script>
-    <script src="assets/ember-deploy-test.js"></script>
+    <script src="assets/ember-heroku-deploy-test.js"></script>
     <script src="testem.js"></script>
     <script>
-      require('ember-deploy-test/tests/test-helper');
+      require('ember-heroku-deploy-test/tests/test-helper');
     </script>
     <script src="assets/test-loader.js"></script>
   </body>
