@@ -33,7 +33,14 @@ git push heroku master
 ```bash
 npm install --save-dev ember-cli-bootstrap@0.0.10
 ```
+Confirmed. installing ember-cli-boostrap@0.0.10 yields
+``` javascript
+Uncaught TypeError: undefined is not a function 
+```
 
+Attempting [this](https://github.com/ember-addons/bootstrap-for-ember/issues/168) fix.
+
+I think the alternative is to include the full version of Handlebars so that it is possible to compile templates on the fly.
 
 ## NPM
 
