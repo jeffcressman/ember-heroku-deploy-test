@@ -3,24 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>EmberHeroku</title>
+    <title>EmberDeployTest</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{BASE_TAG}}
 
     <link rel="stylesheet" href="assets/vendor.css">
-    <link rel="stylesheet" href="assets/ember-heroku.css">
+    <link rel="stylesheet" href="assets/ember-deploy-test.css">
   </head>
   <body>
     <script>
-      window.EmberHerokuENV = {{ENV}};
-      window.EmberENV = window.EmberHerokuENV.EmberENV;
+      window.EmberDeployTestENV = {{ENV}};
+      window.EmberENV = window.EmberDeployTestENV.EmberENV;
     </script>
     <script src="assets/vendor.js"></script>
-    <script src="assets/ember-heroku.js"></script>
+    <script src="assets/ember-deploy-test.js"></script>
     <script>
-      window.EmberHeroku = require('ember-heroku/app')['default'].create(EmberHerokuENV.APP);
+      window.EmberDeployTest = require('ember-deploy-test/app')['default'].create(EmberDeployTestENV.APP);
     </script>
   </body>
 </html>

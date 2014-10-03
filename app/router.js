@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 var Router = Ember.Router.extend({
-  location: EmberHerokuENV.locationType
+  location: EmberDeployTestENV.locationType
 });
 
 Router.map(function() {

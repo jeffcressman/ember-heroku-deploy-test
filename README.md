@@ -1,8 +1,20 @@
 # Ember-heroku
 
-This README outlines the details of collaborating on this Ember application.
+I'm having some difficulty deploying an Ember CLI app to Heroku. I suspect the problem has to do with the [ember-cli-bootstrap](https://github.com/dockyard/ember-cli-bootstrap) add-on as described [here](https://github.com/ember-addons/bootstrap-for-ember/issues/168) and [here](https://github.com/stefanpenner/ember-cli/issues/1727)
 
-A short introduction of this app could easily go here.
+To verify this is the issue I'm going to start with a fresh Ember CLI app, deploy it to Heroku, and then progressively add components that I need and re-deploy.
+
+## Create the Heroku app
+
+```bash
+heroku create ember-deploy-test --buildpack https://github.com/tonycoco/heroku-buildpack-ember-cli.git
+```
+
+## Deploy
+
+```bash
+git push heroku master
+```
 
 ## Prerequisites
 

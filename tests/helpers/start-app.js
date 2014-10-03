@@ -1,6 +1,6 @@
 import Ember from 'ember';
-import Application from 'ember-heroku/app';
-import Router from 'ember-heroku/router';
+import Application from 'ember-deploy-test/app';
+import Router from 'ember-deploy-test/router';
 
 export default function startApp(attrs) {
   var App;
