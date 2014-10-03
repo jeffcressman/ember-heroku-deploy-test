@@ -4,6 +4,14 @@ I'm having some difficulty deploying an Ember CLI app to Heroku. I suspect the p
 
 To verify this is the issue I'm going to start with a fresh Ember CLI app, deploy it to Heroku, and then progressively add components that I need and re-deploy.
 
+Working with Ember CLI
+
+```
+version: 0.0.44
+node: 0.10.31
+npm: 1.4.26
+```
+
 ## Create the Heroku app
 
 ```bash
@@ -14,6 +22,27 @@ heroku create ember-deploy-test --buildpack https://github.com/tonycoco/heroku-b
 
 ```bash
 git push heroku master
+```
+
+## Test
+
+<http://ember-deploy-test.herokuapp.com/>
+
+## Add Components
+
+```bash
+npm install --save-dev ember-cli-bootstrap@0.0.10
+```
+
+
+## NPM
+
+``` bash
+# view components
+npm view ember-cli-boostrap
+# install particular version
+npm install --save-dev ember-cli-bootstrap@0.0.10
+
 ```
 
 ## Prerequisites
