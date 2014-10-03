@@ -38,9 +38,18 @@ Confirmed. installing ember-cli-boostrap@0.0.10 yields
 Uncaught TypeError: undefined is not a function 
 ```
 
-Attempting [this](https://github.com/ember-addons/bootstrap-for-ember/issues/168) fix.
+Attempting [this](https://github.com/ember-addons/bootstrap-for-ember/issues/168) fix. Need to 
+
+```bash
+npm install --save-dev broccoli-merge-trees
+npm install --save-dev broccoli-static-compiler
+```
 
 I think the alternative is to include the full version of Handlebars so that it is possible to compile templates on the fly.
+
+## Pending Things to Try
+
+<http://stackoverflow.com/questions/24067394/ember-cli-cannot-find-module-broccoli-static-compilererror-cannot-find-modul>
 
 ## NPM
 
