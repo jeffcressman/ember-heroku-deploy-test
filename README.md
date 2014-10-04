@@ -94,6 +94,7 @@ Looking at the source code for simple-auth-devise, [0.6.7](https://github.com/si
        ember-cli-simple-auth-devise@0.6.7 node_modules/ember-cli-simple-auth-devise
 ```
 
+Success.
 
 ## Pending Things to Try
 
