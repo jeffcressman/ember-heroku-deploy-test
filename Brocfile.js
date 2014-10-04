@@ -7,7 +7,10 @@ var app = new EmberApp({
 		'handlebars.js': {
 			production:  'bower_components/handlebars/handlebars.js'
 		}
-	}
+	},
+  'ember-cli-bootstrap': {
+    'importBootstrapJS': true
+  }	
 });
 
 // Use `app.import` to add additional libraries to the generated

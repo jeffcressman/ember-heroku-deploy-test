@@ -28,7 +28,7 @@ git push heroku master
 
 <http://ember-heroku-deploy-test.herokuapp.com/>
 
-## Add Components
+## Issue #1 ember-cli-boostrap
 
 ```bash
 npm install --save-dev ember-cli-bootstrap@0.0.10
@@ -69,6 +69,19 @@ var app = new EmberApp({
 
 Success. This works for now but its not a great fix as we should only need the Handlebars runtime. It would be best to figure out the issue with `ember-cli-boostrap` and fix it there.
 
+## Issue #2 ember-cli-simple-auth
+
+```bash
+npm install --save-dev ember-cli-simple-auth@0.6.6 # version for ember-cli 0.0.44
+```
+
+```
+Uncaught Error: Could not find module simple-auth-devise/configuration
+```
+
+## Fix Attempt #3
+
+Needed to run `ember generate ember-cli-simple-auth`. Suspect that in another application where I have the same problem that I ran the generator with an old version, updated, and didn't run it again.
 
 ## Pending Things to Try
 
