@@ -73,6 +73,7 @@ Success. This works for now but its not a great fix as we should only need the H
 
 ```bash
 npm install --save-dev ember-cli-simple-auth@0.6.6 # version for ember-cli 0.0.44
+ember generate ember-cli-simple-auth
 npm install --save-dev ember-cli-simple-auth-devise@0.6.6
 ```
 
@@ -82,9 +83,17 @@ Uncaught Error: Could not find module simple-auth-devise/configuration
 
 ## Fix Attempt #3
 
-Needed to run `ember generate ember-cli-simple-auth`. Suspect that in another application where I have the same problem that I ran the generator with an old version, updated, and didn't run it again.
+So `ember serve --environment=production` doesn't yield the issue, only when deploying to Heroku.
 
-Picked this up from [here](https://github.com/simplabs/ember-cli-simple-auth/issues/11)
+Looking at the source code for simple-auth-devise, [0.6.7](https://github.com/simplabs/ember-cli-simple-auth-devise/commit/d135e3e7e4ba697ecddc316360658638c0eab3fa) switched to using `simple-auth-devise/configuration` instead of `simple-auth-devise/initializer` which implies that the Heroku build isn't using 0.6.6 as expected, which we can see here
+
+```bash
+-----> Installing dependencies       
+       ember-cli-simple-auth@0.6.7 node_modules/ember-cli-simple-auth
+-----> Installing dependencies
+       ember-cli-simple-auth-devise@0.6.7 node_modules/ember-cli-simple-auth-devise
+```
+
 
 ## Pending Things to Try
 
