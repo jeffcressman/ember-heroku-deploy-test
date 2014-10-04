@@ -73,6 +73,7 @@ Success. This works for now but its not a great fix as we should only need the H
 
 ```bash
 npm install --save-dev ember-cli-simple-auth@0.6.6 # version for ember-cli 0.0.44
+npm install --save-dev ember-cli-simple-auth-devise@0.6.6
 ```
 
 ```
@@ -82,6 +83,8 @@ Uncaught Error: Could not find module simple-auth-devise/configuration
 ## Fix Attempt #3
 
 Needed to run `ember generate ember-cli-simple-auth`. Suspect that in another application where I have the same problem that I ran the generator with an old version, updated, and didn't run it again.
+
+Picked this up from [here](https://github.com/simplabs/ember-cli-simple-auth/issues/11)
 
 ## Pending Things to Try
 

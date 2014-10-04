@@ -30,6 +30,7 @@
     "ember-cli-inject-live-reload": "^1.0.2",
     "ember-cli-qunit": "0.1.0",
     "ember-cli-simple-auth": "^0.6.6",
+    "ember-cli-simple-auth-devise": "^0.6.6",
     "express": "^4.8.5",
     "glob": "^4.0.5"
   }
