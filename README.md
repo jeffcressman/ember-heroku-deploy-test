@@ -94,6 +94,22 @@ Looking at the source code for simple-auth-devise, [0.6.7](https://github.com/si
        ember-cli-simple-auth-devise@0.6.7 node_modules/ember-cli-simple-auth-devise
 ```
 
+Switching `package.json` from
+
+```json
+    "ember-cli-simple-auth": "^0.6.6",
+    "ember-cli-simple-auth-devise": "^0.6.6",
+```
+
+to
+
+```json
+    "ember-cli-simple-auth": "0.6.6",
+    "ember-cli-simple-auth-devise": "0.6.6",
+```
+
+fixes the problem.
+
 Success.
 
 ## Pending Things to Try
